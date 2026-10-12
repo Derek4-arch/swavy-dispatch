@@ -1,0 +1,15 @@
+{
+  "name": "swavy-dispatch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Swavy Dispatch: book a motorcycle rider to pick up and deliver packages in Lagos and Abuja, with live tracking, delivery codes, cash tracking and a Telegram bot. Node.js built-ins only.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "start:open": "node server/server.js --open",
+    "db": "node server/db-peek.js",
+    "test": "node tests/api-test.js && node tests/bot-test.js"
+  },
+  "engines": { "node": ">=22.5.0" },
+  "license": "UNLICENSED"
+}

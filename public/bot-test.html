@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5B2EFF">
+<title>Swavy Dispatch bot · Test chat</title>
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/bot-test.css">
+<script src="/js/theme-init.js"></script>
+</head>
+<body class="chatpage">
+<header class="chat-top">
+  <a href="/" class="chat-back" aria-label="Back to Swavy Dispatch">‹</a>
+  <span class="chat-ava" aria-hidden="true"></span>
+  <span class="chat-who"><b>Swavy Dispatch Bot</b><small id="botState">bot · test mode</small></span>
+  <button class="chat-reset" id="reset" title="Start a fresh chat">New chat</button>
+</header>
+<div class="chat-note" id="note">Test mode: this page copies how the bot works inside Telegram, using the same bot brain. Orders you book here are real orders in your Swavy Dispatch app.</div>
+<main class="chat-log" id="log" aria-live="polite"></main>
+<form class="chat-bar" id="bar" autocomplete="off">
+  <input id="msg" class="chat-input" placeholder="Message" aria-label="Message">
+  <button class="chat-send" aria-label="Send">➤</button>
+</form>
+<script src="/js/bot-test.js" defer></script>
+</body>
+</html>

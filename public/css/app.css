@@ -1,0 +1,69 @@
+/* Swavy Dispatch screens. */
+.hl { background: linear-gradient(transparent 58%, var(--lime) 58%); padding: 0 4px; border-radius: 4px; }
+[data-theme="dark"] .hl { color: var(--lime-ink); background: var(--lime); }
+.narrow { max-width: 620px; margin: 0 auto; }
+.center-block { display: block; margin-left: auto; margin-right: auto; }
+.lbl { font-weight: 700; margin: 0 0 8px; }
+.input-lg { min-height: 56px; font-size: 17px; }
+.bigcta { display: flex; align-items: center; gap: 14px; margin-top: 18px; padding: 20px; border-radius: 22px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; box-shadow: 0 12px 30px rgba(91,46,255,.3); }
+.bigcta > .ic:first-child { width: 46px; height: 46px; padding: 10px; background: var(--lime); color: var(--lime-ink); border-radius: 16px; flex: none; }
+.bigcta span { flex: 1; display: flex; flex-direction: column; } .bigcta b { font-size: 21px; } .bigcta small { opacity: .85; font-size: 14px; }
+.feat { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } @media (min-width: 860px) { .feat { grid-template-columns: repeat(4, 1fr); } }
+.feat .card { margin: 0; display: flex; flex-direction: column; gap: 4px; padding: 14px; } .feat .card .ic { color: var(--brand); width: 26px; height: 26px; }
+.livecard { display: block; color: var(--text); border: 2px solid var(--lime); }
+.sizes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; } .sizes .tile { min-height: 150px; padding: 12px 8px; font-size: 16px; } .sizes .tiny { font-weight: 500; line-height: 1.3; }
+.stickybar { position: sticky; bottom: calc(var(--tabbar-h) + 8px); margin-top: 22px; padding: 10px 0 2px; background: linear-gradient(transparent, var(--bg) 30%); z-index: 5; }
+@media (min-width: 860px) { .stickybar { bottom: 8px; } }
+.pricecard { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; margin: 12px 0 14px; }
+.pricecard b { font-size: 40px; letter-spacing: -.03em; line-height: 1.1; } .pricecard .ic-sm { width: 14px; height: 14px; vertical-align: -2px; }
+.routeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.routeline li { display: flex; gap: 12px; align-items: flex-start; padding: 6px 0; position: relative; }
+.routeline li:first-child::after { content: ""; position: absolute; left: 13px; top: 36px; bottom: -8px; border-left: 2px dashed var(--line); }
+.routeline i { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: 13px; color: #fff; }
+.ra { background: var(--brand); } .rb { background: var(--coral); }
+.toggle { flex: none; width: 50px; height: 30px; border-radius: 15px; background: var(--line); position: relative; transition: background .15s; }
+.toggle::after { content: ""; position: absolute; left: 3px; top: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: transform .15s; }
+.toggle.on { background: var(--brand); } .toggle.on::after { transform: translateX(20px); }
+.pick > span:first-child { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; } .pick.on .ic { color: var(--brand); }
+/* Tracking */
+.trackgrid { display: grid; gap: 4px; } @media (min-width: 900px) { .trackgrid { grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; } }
+.status-h { font-size: clamp(24px, 6vw, 32px); }
+.prog { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; padding: 0; margin: 10px 0 14px; }
+.prog li { display: flex; flex-direction: column; gap: 6px; font-size: 11.5px; font-weight: 700; color: var(--muted); text-align: center; }
+.prog i { height: 6px; border-radius: 3px; background: var(--line); } .prog li.done i { background: var(--brand); } .prog li.done { color: var(--text); }
+.prog li.now i { background: linear-gradient(90deg, var(--brand) 50%, var(--line) 50%); background-size: 200% 100%; animation: progmove 1.4s linear infinite; } .prog li.now { color: var(--brand); }
+@keyframes progmove { from { background-position: 100% 0; } to { background-position: 0 0; } }
+.mapbox { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.map { display: block; width: 100%; height: auto; aspect-ratio: 1 / 0.82; }
+.m-bg { fill: #EEF1E8; } [data-theme="dark"] .m-bg { fill: #1A1F27; }
+.m-water { fill: #BFDDF5; } [data-theme="dark"] .m-water { fill: #1D3550; } .m-green { fill: #CFE8C2; } [data-theme="dark"] .m-green { fill: #1F3A27; }
+.m-road { stroke: #fff; stroke-width: 2.2; stroke-linecap: round; } [data-theme="dark"] .m-road { stroke: #2E3542; }
+.m-dot { fill: #9AA0B4; } .m-lbl { font-size: 3px; font-weight: 700; fill: #5D6275; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.85); stroke-width: .7px; }
+[data-theme="dark"] .m-lbl { fill: #B8BDD0; stroke: rgba(0,0,0,.6); }
+.m-route { stroke: var(--brand); stroke-width: .9; stroke-dasharray: 2 1.4; }
+.m-pin-a { fill: var(--brand); } .m-pin-b { fill: var(--coral); } .m-pin-t { font-size: 3.6px; font-weight: 900; fill: #fff; text-anchor: middle; }
+.m-rider { transition: transform 1.4s linear; } .m-rider-halo { fill: rgba(198,244,50,.45); animation: halo 1.6s ease-out infinite; transform-origin: center; transform-box: fill-box; }
+.m-rider-c { fill: #16132B; stroke: var(--lime); stroke-width: .8; } .m-rider-i { stroke: var(--lime); stroke-width: .5; fill: none; stroke-linecap: round; }
+@keyframes halo { 0% { transform: scale(.6); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+.ridercard { display: flex; align-items: center; gap: 12px; } .ridercard .grow { display: flex; flex-direction: column; gap: 2px; align-items: flex-start; }
+.rpic { border-radius: 16px; object-fit: cover; flex: none; background: var(--surface-2); }
+.plate { display: inline-block; font-family: ui-monospace, Consolas, monospace; font-weight: 800; letter-spacing: .08em; background: #FFE34D; color: #16132B; padding: 2px 8px; border-radius: 6px; border: 1.5px solid #16132B; font-size: 13px; }
+.callbtn { background: var(--ok-soft); color: var(--ok); border-radius: 14px; width: 46px; height: 46px; display: inline-grid; place-items: center; }
+.okbig { width: 64px; height: 64px; border-radius: 20px; display: grid; place-items: center; background: var(--ok-soft); color: var(--ok); flex: none; margin: 0 auto 8px; } .okbig .ic { width: 36px; height: 36px; }
+.pphoto { border-radius: 14px; max-height: 240px; object-fit: cover; width: 100%; }
+/* Rider */
+.onlinebtn { display: flex; align-items: center; gap: 16px; width: 100%; padding: 18px 20px; border-radius: 22px; border: 2px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; text-align: left; font: inherit; }
+.onlinebtn span:last-child { display: flex; flex-direction: column; } .onlinebtn b { font-size: 21px; } .onlinebtn small { color: var(--muted); font-size: 14px; }
+.onlinebtn .pw { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); color: var(--muted); flex: none; } .onlinebtn .pw .ic { width: 30px; height: 30px; }
+.onlinebtn.on { border-color: var(--ok); background: var(--ok-soft); } .onlinebtn.on .pw { background: var(--ok); color: #fff; box-shadow: 0 0 0 6px rgba(19,138,75,.18); } .onlinebtn.on b { color: var(--ok); }
+.onlinebtn[disabled] { opacity: .55; cursor: not-allowed; }
+a.stat { color: var(--text); } a.stat.stat-hero { color: #fff; }
+.jobcard { display: block; color: var(--text); }
+.offer .btn-lg { min-width: 120px; } .earn { font-size: 24px; letter-spacing: -.02em; color: var(--ok); }
+/* Admin */
+.admin-tabs { display: flex; width: 100%; } .admin-tabs button { flex: 1; }
+@media (min-width: 760px) { .stat-4 { grid-template-columns: repeat(4, 1fr); } }
+.aorder select.input { min-width: 0; flex-basis: 160px; }
+.setgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; } @media (min-width: 700px) { .setgrid { grid-template-columns: repeat(4, 1fr); } }
+.ptable td { vertical-align: middle; } .pinput { width: 110px; text-align: right; min-height: 44px; }
+.list-links { padding: 4px 16px; } .list-links .rowlink { display: flex; gap: 10px; align-items: center; width: 100%; text-align: left; }
